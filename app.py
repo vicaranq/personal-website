@@ -48,16 +48,8 @@ app.layout = html.Div(children=[
     html.Div(id='tabs-content-example-graph')
 ])
 
-
-image_filename = 'pics/pic1.jpg' # replace with your own image
-encoded_pic1 = base64.b64encode(open(image_filename, 'rb').read())
-image_filename = 'pics/pic2.jpg' # replace with your own image
-encoded_pic2 = base64.b64encode(open(image_filename, 'rb').read())
-image_filename = 'pics/pic3.jpg' # replace with your own image
-encoded_pic3 = base64.b64encode(open(image_filename, 'rb').read())
-
 def get_pic(name):
-    image_filename = f'~/pics/{name}.jpg' # replace with your own image
+    image_filename = f'pics/{name}.jpg' # replace with your own image
     return base64.b64encode(open(image_filename, 'rb').read())
 
 @app.callback(Output('tabs-content-example-graph', 'children'),
