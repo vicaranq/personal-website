@@ -48,9 +48,6 @@ app.layout = html.Div(children=[
     html.Div(id='tabs-content-example-graph')
 ])
 
-# def get_pic(name):
-#     image_filename = f'pics/{name}.jpg' # replace with your own image
-#     return base64.b64encode(open(image_filename, 'rb').read())
 
 @app.callback(Output('tabs-content-example-graph', 'children'),
               Input('tabs-example-graph', 'value'))
@@ -79,16 +76,7 @@ def render_content(tab):
     elif tab == 'tab-3-pics':
         return html.Div([
                         html.H4('These are some of my favorite pictures that I have taken:'),
-                        # html.Div([html.Img(src='data:image/png;base64,{}'.format(get_pic('pic2').decode()), style={'height':'50%', 'width':'50%'}),
-                        #           html.Img(src='data:image/png;base64,{}'.format(get_pic('pic4').decode()), style={'height':'50%', 'width':'50%'}) 
-                        #           ]),
-                        # html.Div([html.Img(src='data:image/png;base64,{}'.format(get_pic('pic5').decode()), style={'height':'50%', 'width':'50%'}),
-                        #           html.Img(src='data:image/png;base64,{}'.format(get_pic('pic6').decode()), style={'height':'50%', 'width':'50%'}) 
-                        #           ]),                                  
-                        # html.Div([html.Img(src='data:image/png;base64,{}'.format(get_pic('pic7').decode()), style={'height':'50%', 'width':'50%'}),
-                        #           html.Img(src='data:image/png;base64,{}'.format(get_pic('pic8').decode()), style={'height':'50%', 'width':'50%'}) 
-                        #           ]),                                     
-                        # html.Div([html.Img(src='data:image/png;base64,{}'.format(get_pic('pic1').decode()), style={'width':'100%'}),]),
+
                         html.Div([html.Img(src=app.get_asset_url('pic2.jpg'), style={'height':'50%', 'width':'50%'}),
                                   html.Img(src=app.get_asset_url('pic4.jpg'), style={'height':'50%', 'width':'50%'}) 
                                   ]),
