@@ -8,6 +8,7 @@ from dash.dependencies import Input, Output
 
 
 app = dash.Dash(__name__)
+server = app.server
 
 colors = {
             'background': '#111111',
@@ -44,10 +45,6 @@ app.layout = html.Div(children=[
         dcc.Tab(label='Contact', value='tab-4-contact')
     ]),
     html.Div(id='tabs-content-example-graph')
-    # dcc.Graph(
-    #     id='example-graph',
-    #     figure=fig
-    # )
 ])
 
 
@@ -56,7 +53,7 @@ app.layout = html.Div(children=[
               Input('tabs-example-graph', 'value'))
 def render_content(tab):
     if tab == 'tab-1-bio':
-        with open('bio.txt') as f:
+        with open('files/bio.txt') as f:
             bio = f.read()
         return html.Div([
                 dcc.Markdown(bio)
@@ -81,7 +78,7 @@ def render_content(tab):
             html.H3('Comming soon!...')
         ])
     elif tab == 'tab-4-contact':
-        with open('contact.txt') as f:
+        with open('files/contact.txt') as f:
             contact = f.read()
         return html.Div([
                 dcc.Markdown(contact)
