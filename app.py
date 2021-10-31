@@ -4,6 +4,7 @@ import dash_html_components as html
 import plotly.express as px
 import pandas as pd
 from dash.dependencies import Input, Output
+import base64
 
 
 
@@ -48,6 +49,16 @@ app.layout = html.Div(children=[
 ])
 
 
+image_filename = 'pics/pic1.jpg' # replace with your own image
+encoded_pic1 = base64.b64encode(open(image_filename, 'rb').read())
+image_filename = 'pics/pic2.jpg' # replace with your own image
+encoded_pic2 = base64.b64encode(open(image_filename, 'rb').read())
+image_filename = 'pics/pic3.jpg' # replace with your own image
+encoded_pic3 = base64.b64encode(open(image_filename, 'rb').read())
+
+def get_pic(name):
+    image_filename = f'pics/{name}.jpg' # replace with your own image
+    return base64.b64encode(open(image_filename, 'rb').read())
 
 @app.callback(Output('tabs-content-example-graph', 'children'),
               Input('tabs-example-graph', 'value'))
@@ -61,7 +72,7 @@ def render_content(tab):
 
     elif tab == 'tab-2-projs':
         return html.Div([
-            html.H3('Tab content 1'),
+            html.H3('Comming soon!...'),
             dcc.Graph(
                 id='graph-1-tabs',
                 figure={
@@ -75,8 +86,21 @@ def render_content(tab):
         ])
     elif tab == 'tab-3-pics':
         return html.Div([
-            html.H3('Comming soon!...')
-        ])
+                        html.H4('These are some of my favorite pictures that I have taken:'),
+                        html.Div([html.Img(src='data:image/png;base64,{}'.format(get_pic('pic2').decode()), style={'height':'50%', 'width':'50%'}),
+                                  html.Img(src='data:image/png;base64,{}'.format(get_pic('pic4').decode()), style={'height':'50%', 'width':'50%'}) 
+                                  ]),
+                        html.Div([html.Img(src='data:image/png;base64,{}'.format(get_pic('pic5').decode()), style={'height':'50%', 'width':'50%'}),
+                                  html.Img(src='data:image/png;base64,{}'.format(get_pic('pic6').decode()), style={'height':'50%', 'width':'50%'}) 
+                                  ]),                                  
+                        html.Div([html.Img(src='data:image/png;base64,{}'.format(get_pic('pic7').decode()), style={'height':'50%', 'width':'50%'}),
+                                  html.Img(src='data:image/png;base64,{}'.format(get_pic('pic8').decode()), style={'height':'50%', 'width':'50%'}) 
+                                  ]),                                     
+                        html.Div([html.Img(src='data:image/png;base64,{}'.format(get_pic('pic1').decode()), style={'width':'100%'}),]),
+                        html.H3('In progress...'),
+                      ])
+
+
     elif tab == 'tab-4-contact':
         with open('files/contact.txt') as f:
             contact = f.read()

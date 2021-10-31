@@ -7,15 +7,22 @@ I am from Cali, Colombia. I moved to Boston, MA, USA in 2014 and lived in Michig
 
 ### Education:
 
-I graduated as a Computer Engineer from the University of Masshachusetts on May, 2018. I joined Ford Motor Company through the Ford College Graduate program which consists of three rotations during three years. 
+I graduated as a Computer Engineer from the University of Massachusetts Amherst on May 2018. 
+
+#### Relevant Classes:
+
+### Work Experience
+
+I joined Ford Motor Company through the Ford College Graduate program which consists of three rotations for three years. 
 
 
 ### Research internships:
-....
+
+I had the opportunity of participating in two summer research internships at [Rensselaer Polytechnic Institute](rpi.edu) and at [Universidad del Valle](https://www.univalle.edu.co/). 
 
 ### Interests:
-My field of interest is aritficial intelligence (AI). 
+My field of interest is artificial intelligence (AI). From my research experience, I am very interested in robotics and how one could control robot's behavior using code. From my online classes and professional career, I am very interested in AI and how it can solve a diverse set of problem in real life. My ultimate interest is to gain expertise in ways that AI can be used in robotics to perform challenging tasks. 
 
 ### Hobbies:
-Soccer
+Travel, soccer (futbol), volleyball, hiking, camping...
 
