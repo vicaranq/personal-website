@@ -5,6 +5,10 @@ Thank you for visiting. My name is Victor Arango-Quiroga and this is my personal
 ### Origin:
 I am from Cali, Colombia. I moved to Boston, MA, USA in 2014 and lived in Michigan for three years before moving back to Boston. 
 
+### Resume/CV:
+
+
+
 ### Interests:
 
 My field of interest is artificial intelligence (AI). From my research experience, I am very interested in robotics and how one could control robot's behavior using code. From my online classes and professional career, I am very interested in AI and how it can solve a diverse set of problem in real life. My ultimate interest is to gain expertise in ways that AI can be used in robotics to perform challenging tasks. 
@@ -17,13 +21,19 @@ I graduated as a Computer Engineer from the University of Massachusetts Amherst 
 
 [CMPSCI 603 Robotics](https://www-robotics.cs.umass.edu/~grupen/603/handouts/syllabus.html)
 
-[ECE597MB Embedded systems: design, modeling, and verification](https://ece.umass.edu/sites/default/files/ece/ECE%20597MB-622.pdf)
+[ECE 597MB Embedded systems: design, modeling, and verification](https://ece.umass.edu/sites/default/files/ece/ECE%20597MB-622.pdf)
 
+[ECE 597IP Image Processing](https://www.coursicle.com/umass/courses/ECENG/597IP/)
 
+[ECE 563 Introduction to Communications and Signal Processing](https://www.coursicle.com/umass/courses/ECENG/563/)
+
+[ECE 313 Introduction to Probability and Random Processes](https://ece.umass.edu/sites/default/files/ece/ECE%20314%20Spring%202017%20Syllabus.pdf)
 
 ### Work Experience
 
-I joined Ford Motor Company through the Ford College Graduate program which consists of three rotations for three years. 
+I joined Ford Motor Company in July 2018 through the Ford College Graduate program which consists of three rotations during a time of three years (in my case, 3 and a half years). 
+
+At Ford, I experienced how machine learning (ML) is used in marketing to make product recommendations and send targeted communications to improve sales and customer experience. I also conducted research on Fintech, including ML, to democratize AI development in the company. As such, I explored AI-as-a-service technologies and created internal publications on how to integrate trained ML models to applications that satisfied company security protocols and that could be integrated to the company's cloud platform. Now, I have been working in different use cases developing scalable AI-based solutions covering regression, classification, clustering, and natural language processing. Thus, I experienced how AI could adapt to different real-world problems.  The demand for internal AI-consulting in the company has exponentially grown in the last few years. As such, I have had the opportunity to be a Tech Lead for one of the new teams that the company is creating to accelerate the production of AI-based solutions. In this position, I am responsible for the technical implementation of the AI-based solutions of my team as well as planning and managing resources to achieve company goals.
 
 
 ### Research internships:

@@ -9,6 +9,7 @@ import base64
 
 
 app = dash.Dash(__name__)
+app.title = "Victor Arango-Quiroga"
 server = app.server
 
 colors = {
