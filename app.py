@@ -4,14 +4,18 @@ import dash_html_components as html
 import plotly.express as px
 import pandas as pd
 from dash.dependencies import Input, Output
-from scripts import bio, projects, photos, contact
-import base64
+from scripts import projects, photos, contact
+from apps import bio
+# import base64
+from flask import Flask,send_from_directory
 
 
 
-app = dash.Dash(__name__)
+server = Flask(__name__)
+app = dash.Dash(server=server)
+# app = dash.Dash(__name__)
 app.title = "Victor Arango-Quiroga"
-server = app.server
+# server = app.server
 
 colors = {
             'background': '#111111',
@@ -63,6 +67,11 @@ def render_content(tab):
         return photos.get_photos(app)
     elif tab == 'tab-4-contact':
         return contact.get_contact_info()             
+
+# @server.route("/Download/<path:path>")
+# def download(path):
+#     return send_from_directory('', path, as_attachment=True)
+    
 
 if __name__ == '__main__':
     app.run_server(debug=True)
