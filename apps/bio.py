@@ -1,7 +1,8 @@
 
 import dash_core_components as dcc
 import dash_html_components as html
-from app import app, server
+# from app import app, server --> circular import issue
+# from flask import current_app
 from dash.dependencies import Input, Output
 from dash_extensions import Download
 from dash_extensions.snippets import send_file
