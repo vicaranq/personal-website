@@ -39,7 +39,7 @@ app.layout = html.Div(children=[
     html.Div(children='Machine Learning Engineer',
             style={'textAlign':'center', 'color':colors['text']}),
 
-    dcc.Tabs(id="tabs-example-graph", value='tab-3-pics', children=[
+    dcc.Tabs(id="tabs-example-graph", value='tab-1-bio', children=[
         dcc.Tab(label='Bio', value='tab-1-bio'),
         dcc.Tab(label='Projects', value='tab-2-projs'),
         dcc.Tab(label='Photos', value='tab-3-pics'),
