@@ -4,6 +4,7 @@ import dash_html_components as html
 import plotly.express as px
 import pandas as pd
 from dash.dependencies import Input, Output
+from scripts import bio, projects, photos, contact
 import base64
 
 
@@ -50,54 +51,18 @@ app.layout = html.Div(children=[
 ])
 
 
+
 @app.callback(Output('tabs-content-example-graph', 'children'),
               Input('tabs-example-graph', 'value'))
 def render_content(tab):
     if tab == 'tab-1-bio':
-        with open('files/bio.txt') as f:
-            bio = f.read()
-        return html.Div([
-                dcc.Markdown(bio)
-                 ])
-
+        return bio.get_bio_content()
     elif tab == 'tab-2-projs':
-        return html.Div([
-            html.H3('Comming soon!...'),
-            dcc.Graph(
-                id='graph-1-tabs',
-                figure={
-                    'data': [{
-                        'x': [1, 2, 3],
-                        'y': [3, 1, 2],
-                        'type': 'bar'
-                    }]
-                }
-            )
-        ])
+        return projects.get_projects()
     elif tab == 'tab-3-pics':
-        return html.Div([
-                        html.H4('These are some of my favorite pictures that I have taken:'),
-
-                        html.Div([html.Img(src=app.get_asset_url('pic2.jpg'), style={'height':'50%', 'width':'50%'}),
-                                  html.Img(src=app.get_asset_url('pic4.jpg'), style={'height':'50%', 'width':'50%'}) 
-                                  ]),
-                        html.Div([html.Img(src=app.get_asset_url('pic5.jpg'), style={'height':'50%', 'width':'50%'}),
-                                  html.Img(src=app.get_asset_url('pic6.jpg'), style={'height':'50%', 'width':'50%'}) 
-                                  ]), 
-                        html.Div([html.Img(src=app.get_asset_url('pic7.jpg'), style={'height':'50%', 'width':'50%'}),
-                                  html.Img(src=app.get_asset_url('pic8.jpg'), style={'height':'50%', 'width':'50%'}) 
-                                  ]),                                                                       
-                        html.Img(src=app.get_asset_url('pic1.jpg'), style={'width':'100%'}),                        
-                        html.H3('In progress...'),
-                      ])
-
-
+        return photos.get_photos(app)
     elif tab == 'tab-4-contact':
-        with open('files/contact.txt') as f:
-            contact = f.read()
-        return html.Div([
-                dcc.Markdown(contact)
-                ])              
+        return contact.get_contact_info()             
 
 if __name__ == '__main__':
     app.run_server(debug=True)
