@@ -7,15 +7,14 @@ from dash.dependencies import Input, Output
 from scripts import projects, photos, contact
 import dash_bootstrap_components as dbc
 from apps import bio
-
-
-
+from dash_extensions import Download
+from dash_extensions.snippets import send_file
 
 
 app = dash.Dash(__name__, external_stylesheets = [dbc.themes.BOOTSTRAP])
-
-
 app.title = "Victor Arango-Quiroga"
+
+server = app.server 
 
 colors = {
             'background': '#111111',
@@ -23,54 +22,52 @@ colors = {
                 'title': '#4682B4'
         }
 
-df = pd.DataFrame({
-    "Fruit": ["Apples", "Oranges", "Bananas", "Apples", "Oranges", "Bananas"],
-    "Amount": [4, 1, 2, 2, 4, 5],
-    "City": ["SF", "SF", "SF", "Montreal", "Montreal", "Montreal"]
-})
 
-fig = px.bar(df, x="Fruit", y="Amount", color="City", barmode="group")
-
-fig.update_layout(
-            plot_bgcolor=colors['background'],
-                paper_bgcolor=colors['background'],
-                    font_color=colors['text']
-                    )
 def generate_row_header():
     return  \
         dbc.Row([
-        dbc.Col(
-            [html.Img(src=app.get_asset_url('me.jpg'), style={'height':'100%', 'width':'100%'})] , width=4
-        ),
-        dbc.Col([
-                html.H1(children='Victor Arango-Quiroga', style={'textAlign':'center', 'color': colors['title'], 'font-style': 'italic' }),
-                html.H3(children='Machine Learning Engineer', style={'textAlign':'center', 'color':colors['title']})
-            ],width=8, className = "h-50", align="center"),
+            dbc.Col(
+                [html.Img(src=app.get_asset_url('me.jpg'), style={'height':'100%', 'width':'100%'})] , width=4
+            ),
+            dbc.Col([
+                    html.H1(children='Victor Arango-Quiroga', style={'textAlign':'center', 'font-style': 'italic' }), #, 'color': colors['title']
+                    html.H3(children='Machine Learning Engineer', style={'textAlign':'center'})
+                ],width=8, className = "h-50", align="center"),
 
         ])
    
+def get_tabs():
+    return \
+         html.Div([
+            dcc.Tabs(id="tabs", value='tab-1-bio', children=[                
+                dcc.Tab(label='Bio', value='tab-1-bio'),
+                dcc.Tab(label='Projects', value='tab-2-projs'),
+                dcc.Tab(label='Photos', value='tab-3-pics'),
+                dcc.Tab(label='Contact', value='tab-4-contact')
+            ]),
+        ])
+
 app.layout = dbc.Container(
     [
         html.Br(),
         generate_row_header(),
         html.Br(),
-        
-        dcc.Tabs(id="tabs-example-graph", value='tab-1-bio', children=[
-            
-            dcc.Tab(label='Bio', value='tab-1-bio'),
-            dcc.Tab(label='Projects', value='tab-2-projs'),
-            dcc.Tab(label='Photos', value='tab-3-pics'),
-            dcc.Tab(label='Contact', value='tab-4-contact')
-        ]),
-
-        html.Div(id='tabs-content-example-graph')
-
+        get_tabs(),
+        html.Div(id='tabs-content'),
     ]
 )
 
+######## CALLBACKS #########
 
-@app.callback(Output('tabs-content-example-graph', 'children'),
-              Input('tabs-example-graph', 'value'))
+@app.callback(
+    Output("download", "data"), 
+    [Input("btn", "n_clicks")],
+    prevent_initial_call=True,)
+def func(n_clicks):
+    return send_file("assets/CV/Arango-Quiroga_Victor_CV.pdf")
+
+@app.callback(Output('tabs-content', 'children'),
+              Input('tabs', 'value'))
 def render_content(tab):
     if tab == 'tab-1-bio':
         return bio.get_bio_content()
@@ -80,11 +77,6 @@ def render_content(tab):
         return photos.get_photos(app)
     elif tab == 'tab-4-contact':
         return contact.get_contact_info()             
-
-# @server.route("/Download/<path:path>")
-# def download(path):
-#     return send_from_directory('', path, as_attachment=True)
-    
 
 if __name__ == '__main__':
     app.run_server(debug=True)
