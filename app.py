@@ -5,6 +5,7 @@ import plotly.express as px
 import pandas as pd
 from dash.dependencies import Input, Output
 from scripts import projects, photos, contact
+import dash_bootstrap_components as dbc
 from apps import bio
 # import base64
 from flask import Flask,send_from_directory
@@ -39,11 +40,51 @@ fig.update_layout(
                     )
 
 app.layout = html.Div(children=[
-    html.H1(children='Victor Arango-Quiroga',
-            style={'textAlign':'center', 'color':colors['text']}),
+    # html.H1(children='Victor Arango-Quiroga',
+    #         style={'textAlign':'center', 'color':colors['text']}),
 
-    html.Div(children='Machine Learning Engineer',
-            style={'textAlign':'center', 'color':colors['text']}),
+    # html.Div(children='Machine Learning Engineer',
+    #         style={'textAlign':'center', 'color':colors['text']}),
+
+    # # first column of first row
+    # html.Div(children="Testing1", style={'display': 'inline-block', 'vertical-align': 'top', 'margin-left': '100px', 'margin-top': '3vw'}),
+
+    # # second column of first row
+    # html.Div(children="Testing2", style={'display': 'inline-block', 'vertical-align': 'top', 'margin-left': '100px', 'margin-top': '3vw'}),
+
+    # # third column of first row
+    # html.Div(children="Testing3", style={'display': 'inline-block', 'vertical-align': 'top', 'margin-left': '100px', 'margin-top': '3vw','width': '100%'}),
+    
+    # first row
+    html.Div(children=[
+
+        # first column of first row
+        html.Div(html.Img(src=app.get_asset_url('me.jpg'), style={'height':'75%', 'width':'85%'}), 
+            style={'display': 'inline-block', 'width':'33%','textAlign':'center', "border":"2px black solid"}), #, 'vertical-align': 'top', 'margin-left': '3vw', 'margin-top': '3vw'}),
+
+        # second column of first row
+        html.Div(children= 
+        # "test"
+        [
+            html.H1(children='Victor Arango-Quiroga',  style={'textAlign':'text-top', 'width':'100%', 'color':colors['text'], "border":"2px black solid"}),
+            html.H3(children="Machine Learning Engineer", style={'width':'100%','textAlign':'center', 'color':colors['text'], "border":"2px black solid"}), #, 'vertical-align': 'top', 'margin-left': '3vw', 'margin-top': '3vw'}),
+        ]
+        , 
+            style={'display': 'inline-block', 'height' :'100px' ,'width':'33%', "border":"2px black solid", 'textAlign':'center'})
+
+        # third column of first row
+        # html.Div(children="Testing3", style={'display': 'inline-block', 'width':'33%','textAlign':'center'}), #, 'vertical-align': 'top', 'margin-left': '3vw', 'margin-top': '3vw'}),
+
+    ], className='row', style={ 'width': '100%', "border":"2px black solid"}),
+
+    # dbc.Row(
+    #     [
+    #         dbc.Col(html.Div("One of three columns"), width=2),
+    #         dbc.Col(html.Div("One of three columns"), width=2),
+    #         dbc.Col(html.Div("One of three columns"), width=2),
+    #     ]
+    # ),    
+
 
     dcc.Tabs(id="tabs-example-graph", value='tab-1-bio', children=[
         dcc.Tab(label='Bio', value='tab-1-bio'),
