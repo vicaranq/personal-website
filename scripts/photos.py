@@ -3,6 +3,8 @@ import dash_html_components as html
 
 def get_photos(app):
     return html.Div([
+                html.Br(),
+                
                 html.H4('These are some of my favorite pictures that I have taken:'),
 
                 html.Div([html.Img(src=app.get_asset_url('pic2.jpg'), style={'height':'50%', 'width':'50%'}),

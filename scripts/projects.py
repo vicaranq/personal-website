@@ -4,6 +4,7 @@ import dash_html_components as html
 def get_projects():
 
     return html.Div([
+            html.Br(),
             html.H3('Comming soon!...'),
             dcc.Graph(
                 id='graph-1-tabs',

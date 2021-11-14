@@ -19,6 +19,7 @@ def get_bio_content():
         with open(file_location) as f:
             bio = f.read()
         return html.Div([
+                html.Br(),
                 dcc.Markdown(bio),
                 # dcc.Markdown("### Resume/CV"),
                 # html.A(html.Button('Download file'), href="files/bio.txt")                

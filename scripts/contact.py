@@ -9,6 +9,7 @@ def get_contact_info():
         with open(file_location) as f:
             contact = f.read()
         return html.Div([
+                html.Br(),
                 dcc.Markdown(contact)
                 ])   
     except Exception as e:
