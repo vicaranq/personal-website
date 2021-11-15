@@ -4,14 +4,15 @@ import dash_html_components as html
 import plotly.express as px
 import pandas as pd
 from dash.dependencies import Input, Output
-from scripts import projects, photos, contact
 import dash_bootstrap_components as dbc
 from apps import bio
 from dash_extensions import Download
 from dash_extensions.snippets import send_file
+from scripts import projects, photos, contact, util
 
 
 app = dash.Dash(__name__, external_stylesheets = [dbc.themes.BOOTSTRAP])
+app.config.suppress_callback_exceptions=True
 app.title = "Victor Arango-Quiroga"
 
 server = app.server 
@@ -58,14 +59,20 @@ app.layout = dbc.Container(
 )
 
 ######## CALLBACKS #########
-
+#### PROJECTS ######
+@app.callback(Output("output", "children"), 
+                [Input("input", "value")], 
+                prevent_initial_call=True)
+def output_text(review):
+    return util.predict(review)
+#### BIO ######
 @app.callback(
     Output("download", "data"), 
     [Input("btn", "n_clicks")],
-    prevent_initial_call=True,)
+    prevent_initial_call=True)
 def func(n_clicks):
     return send_file("assets/CV/Arango-Quiroga_Victor_CV.pdf")
-
+#### APP ######
 @app.callback(Output('tabs-content', 'children'),
               Input('tabs', 'value'))
 def render_content(tab):
@@ -77,6 +84,8 @@ def render_content(tab):
         return photos.get_photos(app)
     elif tab == 'tab-4-contact':
         return contact.get_contact_info()             
+
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)
