@@ -26,8 +26,8 @@ flask_app = app.server
 # Setup as per Flask integration
 ScoutApm(flask_app)
 flask_app.config["SCOUT_NAME"] = "website-monitoring"
-flask_app.config["SCOUT_MONITOR"] = True
-flask_app.config["SCOUT_KEY"] = "kwP2SfscNu98W3qBzxGz"
+# flask_app.config["SCOUT_MONITOR"] = True
+# flask_app.config["SCOUT_KEY"] = "kwP2SfscNu98W3qBzxGz"
 
 colors = {
             'background': '#111111',
