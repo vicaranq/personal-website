@@ -10,12 +10,24 @@ from dash_extensions import Download
 from dash_extensions.snippets import send_file
 from scripts import projects, photos, contact, util
 
+#pip install scout-apm
+# Integrating with scoutapm
+from scout_apm.flask import ScoutApm
+
+
+
 
 app = dash.Dash(__name__, external_stylesheets = [dbc.themes.BOOTSTRAP])
 app.config.suppress_callback_exceptions=True
 app.title = "Victor Arango-Quiroga"
 
-server = app.server 
+flask_app = app.server
+
+# Setup as per Flask integration
+ScoutApm(flask_app)
+flask_app.config["SCOUT_NAME"] = "website-monitoring"
+flask_app.config["SCOUT_MONITOR"] = True
+flask_app.config["SCOUT_KEY"] = "kwP2SfscNu98W3qBzxGz"
 
 colors = {
             'background': '#111111',
