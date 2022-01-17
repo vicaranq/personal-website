@@ -2,8 +2,9 @@
 This repo contains Dash code to create personal website to display some basic info, photos, and some projects.
 
 Link to website:
-https://personal-website-v1.herokuapp.com/ 
-https://www.victor-arango-quiroga.com/
+
+- https://personal-website-v1.herokuapp.com/ 
+- https://www.victor-arango-quiroga.com/
 
 
 
@@ -15,26 +16,32 @@ https://www.victor-arango-quiroga.com/
 
 2. Activate environment:
 
-'source venv/bin/activate'
+  :eyes:``` source venv/bin/activate ```
 
-Note: Using WSL/Linux
+:pencil2: Note: Using WSL/Linux
 
 3. Install gunicorn (server to run Flask/Dash app). Note: Flask built-in server can be used as well to debug, but gunicorn is the one running the website. 
-sudo apt install gunicorn
+
+:eyes: ```sudo apt install gunicorn```
 
 4. Install dependecies:
+  
+  :eyes: ```pip install -r requirements.txt ```
 
-'pip install -r requirements.txt'
+5. Run:
+
+  :eyes: ``` gunicorn app:flask_app ```
 
 
 # To deploy in Heroku:
 1. Login: 
 
-'heroku login'
+  :eyes: ``` heroku login ```
 
-Note: It'll open a window to login to Heroky CLI
+:pencil2: Note: It'll open a window to login to Heroky CLI
 
 2. Once code changes are added and committed:
-'git push heroku master' 
+
+  :eyes: ```git push heroku master```
 
 
