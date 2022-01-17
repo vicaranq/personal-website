@@ -4,6 +4,7 @@ import dash_html_components as html
 import dash_bootstrap_components as dbc
 from dash import html
 
+from scripts import util
 
 def get_projects():
 
@@ -11,7 +12,8 @@ def get_projects():
             html.Br(),
             html.H3('In progress...'),
             html.Br(),
-            sentiment_analysis_card
+            sentiment_analysis_card,
+
 
         ])
 
@@ -27,7 +29,7 @@ sentiment_analysis_card = dbc.Card(
                                             The  data used for developing this project was obtained from www.rottentomatoes.com.
                                             
                                             I implemented this algorithm using stochastic gradient descent and learned the predictor by minimizing the hinge loss function. The generated 
-                                            predictor obtained a training error of 0.027011 and test error of 0.2751228. For this project I utilized a sparse feature vector represented in 
+                                            predictor obtained a training error of 0.027011 and test error of 0.2751228. For this project, I utilized a sparse feature vector represented in 
                                             Python by a dictionary (e.g. defaultdict from Collections).
 
                                             I created and used two type of feature extractors in this project; a word feature extractor and a character n-grams feature extractor. The former 
@@ -53,3 +55,81 @@ sentiment_analysis_card = dbc.Card(
                             style={"width": "24rem"},
                         )
 
+
+word_segmentation_1 = dbc.Card(
+                            [
+
+                                dbc.CardBody(
+                                    [
+                                        html.H4("Word Segmentation 2", className="card-title"),
+                                        html.P(
+                                            """
+                                            I develoepd an algorithm to find the optimal word segmentation of an input character sequence. The input string must be a string of alphabetical characters
+                                            without whitespaces. For instance, for input "thisisatest" we should obtain "this is a test". The Uniform Cost Search algorithm is used to 
+
+                                            """,
+                                            className="card-text", 
+                                            style = {'align' : 'justify'}
+
+                                        )
+                                    ]
+                                ),
+                                html.Div(
+                                    [
+                                        dbc.Input(id="input", placeholder="Type review...", type="text"),
+                                        html.Br(),
+                                        html.P(id="output"),
+                                    ]
+                                ),                                
+                            ],
+                            style={"width": "24rem"},
+                        )
+
+
+
+'''
+class SegmentationProblem(util.SearchProblem):
+    def __init__(self, query, unigramCost):
+        self.query = query
+        self.unigramCost = unigramCost
+
+    def startState(self):
+        pass
+        # ### START CODE HERE ###
+        return (0,0) 
+        # ### END CODE HERE ###
+
+    def isEnd(self, state):
+        pass
+        # ### START CODE HERE ###
+        return state[1] >= len(self.query) # Current state has finalized capturing the query string
+        # ### END CODE HERE ###
+
+    def succAndCost(self, state):
+        pass
+        # ### START CODE HERE ###
+        start_idx, end_idx = state 
+        # First time, end_idx will be 0 from initial state, next values will depend on the lowest cost in succesor list which is returned in this function
+        N = len(self.query)        
+        return [(self.query[end_idx:j] , (end_idx, j), self.unigramCost(self.query[end_idx:j])) for j in range(end_idx+1, N+1)]
+        # ### END CODE HERE ###
+
+def segmentWords(query, unigramCost):
+    if len(query) == 0:
+        return ''
+
+    ucs = util.UniformCostSearch(verbose=0)
+    ucs.solve(SegmentationProblem(query, unigramCost))
+
+    # ### START CODE HERE ###
+    return " ".join(ucs.actions)
+    # ### END CODE HERE ###    
+
+def get_segmented_word(input_seq):    
+    def unigramCost(x):
+        if x in ['this', 'is', 'a', 'test']:
+            return 1.0
+        else:
+            return 1000.0
+    return segmentWords(input_seq, unigramCost)    
+    '''

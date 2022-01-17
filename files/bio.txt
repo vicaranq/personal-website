@@ -11,7 +11,12 @@ My field of interest is artificial intelligence (AI). From my research experienc
 
 ### Education:
 
-I graduated as a Computer Engineer from the University of Massachusetts Amherst on May 2018. 
+I graduated as a Computer Engineer from the University of Massachusetts Amherst on May 2018. I am currently pursuing a [Stanford Professional Certificate in Artificial Intelligence](https://online.stanford.edu/programs/artificial-intelligence-professional-program)
+where I am taking three courses:
+
+1. [Artificial Intelligence: Principles and Techniques XCS221 ](https://online.stanford.edu/courses/xcs221-artificial-intelligence-principles-and-techniques)
+2. [Natural Language Understanding XCS224U](https://online.stanford.edu/courses/xcs224u-natural-language-understanding)
+3. [Machine Learning XCS229](https://online.stanford.edu/courses/xcs229-machine-learning)
 
 #### Relevant Classes:
 
@@ -34,7 +39,7 @@ At Ford, I experienced how machine learning (ML) is used in marketing to make pr
 
 ### Research internships:
 
-I had the opportunity of participating in two summer research internships at [Rensselaer Polytechnic Institute](https://www.rpi.edu) and at [Universidad del Valle](https://www.univalle.edu.co/). 
+I had the opportunity of participating in two summer research internships at [Rensselaer Polytechnic Institute](https://www.rpi.edu) and at [Universidad del Valle](https://www.univalle.edu.co/). (see my resume below) 
 
 
 ### Hobbies:
