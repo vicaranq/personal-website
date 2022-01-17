@@ -28,7 +28,13 @@ sudo apt install gunicorn
 
 
 # To deploy in Heroku:
-1. Once code changes are added and committed:
+1. Login: 
+
+'heroku login'
+
+Note: It'll open a window to login to Heroky CLI
+
+2. Once code changes are added and committed:
 'git push heroku master' 
 
 
