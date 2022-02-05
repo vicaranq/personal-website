@@ -28,3 +28,6 @@ tenacity==8.0.1
 urllib3==1.26.7
 Werkzeug==2.0.2
 scout-apm
+matplotlib==3.5.0
+scikit-learn>=0.23.0
+

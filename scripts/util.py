@@ -1,6 +1,10 @@
 
 from collections import defaultdict
 import heapq
+import os
+import pandas as pd
+from scripts import vsm
+
 
 
 WEIGHTS_PATH = 'files/weights'
@@ -168,4 +172,24 @@ class PriorityQueue:
             if self.priorities[state] == self.DONE: continue  # Outdated priority, skip
             self.priorities[state] = self.DONE
             return (state, priority)
-        return (None, None)            
+        return (None, None)         
+
+
+# WORD SIMILARTY
+def loadVSM():
+    return pd.read_csv(
+            os.path.join('files', 'giga5_ppmi_svd_k300.csv.gz'), index_col=0)
+giga5_ppmi_svd_k300_vsm = loadVSM() 
+
+def getSimilarity(word):
+    pass    
+    # load vector space model
+    # giga5_ppmi_svd_k300_vsm = loadVSM()
+
+    if word in set(giga5_ppmi_svd_k300_vsm.index):
+    # check if word is in vocab
+        df = vsm.neighbors(word, giga5_ppmi_svd_k300_vsm, distfunc=vsm.cosine).head()        
+        return " | ".join(list(df.index))
+    else:
+        return "Word is not in vocabulary"
+

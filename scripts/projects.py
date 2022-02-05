@@ -13,10 +13,12 @@ def get_projects():
             html.H3('In progress...'),
             html.Br(),
             sentiment_analysis_card,
+            word_similarity,
 
 
         ])
 
+''' ------------------------------- CARDS ------------------------------- '''
 
 sentiment_analysis_card = dbc.Card(
                             [
@@ -85,6 +87,38 @@ word_segmentation_1 = dbc.Card(
                             style={"width": "24rem"},
                         )
 
+
+word_similarity = dbc.Card(
+                            [
+
+                                dbc.CardBody(
+                                    [
+                                        html.H4("Word Similarity", className="card-title"),
+                                        html.P(
+                                            """
+                                            I develoepd a Vector Space Model (VSM) based on the Gigaword with window size of 5 and scaled. Furthermore, I reweighted the matix using the Positive Pointwise Mutual Information (PPMI) and 
+                                            used the Latent Semantic Analysis (LSA) dimensionality reduction technique. Based on an input word, one could find the closest words to it (e.g. similar words). Please provide a word and this 
+                                            program will show the 5 closest words to it according to this VSM. 
+                                            Note: Word examples are: terrific, happy, dance, sleep/ 
+                                            """,
+                                            className="card-text", 
+                                            style = {'align' : 'justify'}
+
+                                        )
+                                    ]
+                                ),
+                                html.Div(
+                                    [
+                                        dbc.Input(id="word_sim_input", placeholder="Type input word...", type="text"),
+                                        html.Br(),
+                                        html.P(id="word_sim_output"),
+                                    ]
+                                ),                                
+                            ],
+                            style={"width": "24rem"},
+                        )
+
+''' ------------------------------- END CARDS ------------------------------- '''
 
 
 '''

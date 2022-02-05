@@ -26,8 +26,7 @@ flask_app = app.server
 # Setup as per Flask integration
 ScoutApm(flask_app)
 flask_app.config["SCOUT_NAME"] = "website-monitoring"
-# flask_app.config["SCOUT_MONITOR"] = True
-# flask_app.config["SCOUT_KEY"] = "kwP2SfscNu98W3qBzxGz"
+
 
 colors = {
             'background': '#111111',
@@ -77,6 +76,13 @@ app.layout = dbc.Container(
                 prevent_initial_call=True)
 def output_text(review):
     return util.predict(review)
+
+@app.callback(Output("word_sim_output", "children"), 
+                [Input("word_sim_input", "value")], 
+                prevent_initial_call=True)
+def output_text(word):
+    return util.getSimilarity(word.strip().lower())
+
 #### BIO ######
 @app.callback(
     Output("download", "data"), 
