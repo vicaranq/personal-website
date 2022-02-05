@@ -96,10 +96,10 @@ word_similarity = dbc.Card(
                                         html.H4("Word Similarity", className="card-title"),
                                         html.P(
                                             """
-                                            I develoepd a Vector Space Model (VSM) based on the Gigaword with window size of 5 and scaled. Furthermore, I reweighted the matix using the Positive Pointwise Mutual Information (PPMI) and 
+                                            I develoepd a Vector Space Model (VSM) based on the Gigaword dataset with window size of 5 and scaled. Furthermore, I reweighted the matrix using the Positive Pointwise Mutual Information (PPMI) and 
                                             used the Latent Semantic Analysis (LSA) dimensionality reduction technique. Based on an input word, one could find the closest words to it (e.g. similar words). Please provide a word and this 
                                             program will show the 5 closest words to it according to this VSM. 
-                                            Note: Word examples are: terrific, happy, dance, sleep/ 
+                                            Note: Word examples are: terrific, happy, dance, sleep.  
                                             """,
                                             className="card-text", 
                                             style = {'align' : 'justify'}
