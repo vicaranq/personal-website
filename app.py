@@ -95,7 +95,7 @@ def func(n_clicks):
               Input('tabs', 'value'))
 def render_content(tab):
     if tab == 'tab-1-bio':
-        return bio.get_bio_content()
+        return bio.get_bio_content(app)
     elif tab == 'tab-2-projs':
         return projects.get_projects()
     elif tab == 'tab-3-pics':
