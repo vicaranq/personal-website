@@ -43,7 +43,8 @@ def generate_row_header():
             ),
             dbc.Col([
                     html.H1(children='Victor Arango-Quiroga', style={'textAlign':'center', 'font-style': 'italic' }), #, 'color': colors['title']
-                    html.H3(children='Machine Learning Engineer', style={'textAlign':'center'})
+                    html.H3(children='Machine Learning Engineer', style={'textAlign':'center'}),
+                    html.H3(children='Tech Lead', style={'textAlign':'center'})
                 ],width=8, className = "h-50", align="center"),
 
         ])

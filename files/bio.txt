@@ -1,6 +1,6 @@
-Hi! 
+﻿Hi! 
 
-Thank you for visiting. My name is Victor Arango-Quiroga and this is my personal website. 
+Thank you for visiting. My name is Victor and this is my personal website. 
 
 ### Origin:
 I am from Cali, Colombia where I studied at ICESI university. I moved to Boston, MA in 2014 where I finished my undergraduate studies at the University of Massachusetts Amherst. I graduated and moved to Michigan for work in 2018.
@@ -8,18 +8,21 @@ Three years later and during the pandemic, I moved back to Boston where I am cur
 
 ### Interests:
 
-My field of interest is artificial intelligence (AI). From my research experience, I am very interested in robotics and how one could control robot's behavior using code. From my online classes and professional career, I am very interested in AI and how it can solve a diverse set of problem in real life. My ultimate interest is to gain expertise in ways that AI can be used in robotics to perform challenging tasks. 
-During my research and professional experience, I have been exposed and worked on natural language processing (NLP), machine learning (deep learning/NN, CNN, RNN, LSTM, XGBoost, and others), and AI in general (search, path planning, markov decision problems). 
+My field of interest is artificial intelligence (AI), specially Machine Learning (ML). From my research experience, I am very interested in robotics and how one could control robot's 
+behavior as a response of its environment (e.g. through visual or sound information). From my online classes and professional career, I am very interested in ML and Natural Language Processing 
+(NLP) and how they can solve a diverse set of problems in real life. 
+My ultimate interest is to gain expertise in ways that AI can be used in robotics to perform challenging tasks. 
+During my research and professional experience, I have been exposed and worked on NLP, ML (deep learning/NN, CNN, RNN, LSTM, XGBoost, and others), and AI in general (search, path planning, markov decision problems). 
 I also have substantial experience productionalizing ML applications (MLops) which is my current focus. These experiences motivate me to continue exploring and deepen my knowledge in AI and how it integrates with robotics. 
 
 ### Education: 
 
-I graduated as a Computer Engineer from the University of Massachusetts Amherst on May 2018. I am currently pursuing a [Stanford Professional Certificate in Artificial Intelligence](https://online.stanford.edu/programs/artificial-intelligence-professional-program)
-where I am taking three courses:
+I graduated as a Computer Engineer from the University of Massachusetts Amherst on May 2018. I recently completed the [Stanford Professional Certificate in Artificial Intelligence](https://online.stanford.edu/programs/artificial-intelligence-professional-program)
+where I took three courses:
 
-1. [Artificial Intelligence: Principles and Techniques XCS221 ](https://online.stanford.edu/courses/xcs221-artificial-intelligence-principles-and-techniques)
-2. [Natural Language Understanding XCS224U](https://online.stanford.edu/courses/xcs224u-natural-language-understanding)
-3. [Machine Learning XCS229](https://online.stanford.edu/courses/xcs229-machine-learning)
+1. [Artificial Intelligence: Principles and Techniques XCS221](https://online.stanford.edu/courses/xcs221-artificial-intelligence-principles-and-techniques) by Dr. Percy Liang & Dr. Dorsa Sadigh 
+2. [Natural Language Understanding XCS224U](https://online.stanford.edu/courses/xcs224u-natural-language-understanding) by Christopher Potts
+3. [Machine Learning XCS229](https://online.stanford.edu/courses/xcs229-machine-learning) by Dr. Andrew Ng
 
 #### Relevant Classes:
 
@@ -32,6 +35,9 @@ where I am taking three courses:
 [ECE 563 Introduction to Communications and Signal Processing](https://www.coursicle.com/umass/courses/ECENG/563/)
 
 [ECE 313 Introduction to Probability and Random Processes](https://ece.umass.edu/sites/default/files/ece/ECE%20314%20Spring%202017%20Syllabus.pdf)
+
+[ECE 221: Introduction to Digital and Computer Systems]( https://ece.umass.edu/sites/default/files/ece/ece221-syllabus-F16.pdf) 
+
 
 ### Work Experience
 
