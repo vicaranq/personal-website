@@ -42,6 +42,7 @@ where I took three courses:
 ### Work Experience
 
 I joined Ford Motor Company in July 2018 through the Ford College Graduate program which consists of three rotations during a time of three years (in my case, 3 and a half years). 
+In 2021, I was selected to be part of a program for Ford employees called High Tech High Demand (HTHD). 
 
 At Ford, I experienced how machine learning (ML) is used in marketing to make product recommendations and send targeted communications to improve sales and customer experience. I also conducted research on Fintech, including ML, to democratize AI development in the company. As such, I explored AI-as-a-service technologies and created internal publications on how to integrate trained ML models to applications that satisfied company security protocols and that could be integrated to the company's cloud platform. Now, I have been working in different use cases developing scalable AI-based solutions covering regression, classification, clustering, and natural language processing. Thus, I experienced how AI could adapt to different real-world problems.  The demand for internal AI-consulting in the company has exponentially grown in the last few years. As such, I have had the opportunity to be a Tech Lead for one of the new teams that the company is creating to accelerate the production of AI-based solutions. In this position, I am responsible for the technical implementation of the AI-based solutions of my team as well as planning and managing resources to achieve company goals.
 
