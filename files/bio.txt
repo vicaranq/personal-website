@@ -2,50 +2,84 @@
 
 Thank you for visiting. My name is Victor and this is my personal website. 
 
-### Origin:
-I am from Cali, Colombia where I studied at ICESI university. I moved to Boston, MA in 2014 where I finished my undergraduate studies at the University of Massachusetts Amherst. I graduated and moved to Michigan for work in 2018.
-Three years later and during the pandemic, I moved back to Boston where I am currently living. 
+### Brief personal story:
+I am originally from Cali, Colombia. In 2014, I moved to Boston, MA where I learned English through an ESL program at the University of Massachusetts Boston and later transferred my studies from Colombia to the University of Massachusetts Amherst. I graduated as a computer engineer in 2018 and moved to Dearborn, Michigan for work that same year.
+Three years later and during the pandemic, I moved back to Boston. In 2022, I moved to San Diego, CA to pursue my Master of Science in Computer Science at the University of California San Diego. 
+
 
 ### Interests:
 
-My field of interest is artificial intelligence (AI), specially Machine Learning (ML). From my research experience, I am very interested in robotics and how one could control robot's 
+My field of interest is artificial intelligence (AI), specially machine learning (ML). From my research experience, I am interested in robotics and how one could control robot's 
 behavior as a response of its environment (e.g. through visual or sound information). From my online classes and professional career, I am very interested in ML and Natural Language Processing 
 (NLP) and how they can solve a diverse set of problems in real life. 
-My ultimate interest is to gain expertise in ways that AI can be used in robotics to perform challenging tasks. 
+
 During my research and professional experience, I have been exposed and worked on NLP, ML (deep learning/NN, CNN, RNN, LSTM, XGBoost, and others), and AI in general (search, path planning, markov decision problems). 
-I also have substantial experience productionalizing ML applications (MLops) which is my current focus. These experiences motivate me to continue exploring and deepen my knowledge in AI and how it integrates with robotics. 
+I also have substantial experience productionalizing ML applications (MLops) and have delivered 20+ ML/NLP projects during my time at Ford Motor Company. 
+
+ These experiences motivate me to continue exploring and deepen my knowledge in AI and how it integrates with real life.  
 
 ### Education: 
 
-I graduated as a Computer Engineer from the University of Massachusetts Amherst on May 2018. I recently completed the [Stanford Professional Certificate in Artificial Intelligence](https://online.stanford.edu/programs/artificial-intelligence-professional-program)
-where I took three courses:
+M.S. in Computer Science at the University of California San Diego - Expected Dec 2023
 
-1. [Artificial Intelligence: Principles and Techniques XCS221](https://online.stanford.edu/courses/xcs221-artificial-intelligence-principles-and-techniques) by Dr. Percy Liang & Dr. Dorsa Sadigh 
-2. [Natural Language Understanding XCS224U](https://online.stanford.edu/courses/xcs224u-natural-language-understanding) by Christopher Potts
-3. [Machine Learning XCS229](https://online.stanford.edu/courses/xcs229-machine-learning) by Dr. Andrew Ng
+B.S. in Computer Engineering at the University of Massachusetts Amherst  - May 2018
+
+Certifications: 
+
+[Stanford Professional Certificate in Artificial Intelligence](https://online.stanford.edu/programs/artificial-intelligence-professional-program)  - June 2022
+
+
 
 #### Relevant Classes:
 
-[CMPSCI 603 Robotics](https://www-robotics.cs.umass.edu/~grupen/603/handouts/syllabus.html)
+- *UC San Diego * 
 
-[ECE 597MB Embedded systems: design, modeling, and verification](https://ece.umass.edu/sites/default/files/ece/ECE%20597MB-622.pdf)
+    (Fall 2022)
 
-[ECE 597IP Image Processing](https://www.coursicle.com/umass/courses/ECENG/597IP/)
+    CSE 250A 	Probabilistic Reason&Learning - Prof. Berg-Kirkpatrick
 
-[ECE 563 Introduction to Communications and Signal Processing](https://www.coursicle.com/umass/courses/ECENG/563/)
+    CSE 252A 	Computer Vision I - Prof. Benjamin	Ochoa
 
-[ECE 313 Introduction to Probability and Random Processes](https://ece.umass.edu/sites/default/files/ece/ECE%20314%20Spring%202017%20Syllabus.pdf)
+    CSE 276A 	Introduction to Robotics  - Prof. Henrik I Christensen
 
-[ECE 221: Introduction to Digital and Computer Systems]( https://ece.umass.edu/sites/default/files/ece/ece221-syllabus-F16.pdf) 
+- *Stanford University* 
+
+    [Artificial Intelligence: Principles and Techniques XCS221](https://online.stanford.edu/courses/xcs221-artificial-intelligence-principles-and-techniques) by Dr. Percy Liang & Dr. Dorsa Sadigh 
+
+    [Natural Language Understanding XCS224U](https://online.stanford.edu/courses/xcs224u-natural-language-understanding) by Christopher Potts
+
+    [Machine Learning XCS229](https://online.stanford.edu/courses/xcs229-machine-learning) by Dr. Andrew Ng
+
+- *University of Massachusetts Amherst*
+
+    [CMPSCI 603 Robotics](https://www-robotics.cs.umass.edu/~grupen/603/handouts/syllabus.html)
+
+    [ECE 597MB Embedded systems: design, modeling, and verification](https://ece.umass.edu/sites/default/files/ece/ECE%20597MB-622.pdf)
+
+    [ECE 597IP Image Processing](https://www.coursicle.com/umass/courses/ECENG/597IP/)
+
+    [ECE 563 Introduction to Communications and Signal Processing](https://www.coursicle.com/umass/courses/ECENG/563/)
+
+    [ECE 313 Introduction to Probability and Random Processes](https://ece.umass.edu/sites/default/files/ece/ECE%20314%20Spring%202017%20Syllabus.pdf)
+
+    [ECE 221: Introduction to Digital and Computer Systems]( https://ece.umass.edu/sites/default/files/ece/ece221-syllabus-F16.pdf) 
 
 
 ### Work Experience
 
-I joined Ford Motor Company in July 2018 through the Ford College Graduate program which consists of three rotations during a time of three years (in my case, 3 and a half years). 
-In 2021, I was selected to be part of a program for Ford employees called High Tech High Demand (HTHD). 
+I joined Ford Motor Company in July 2018 through the Ford College Graduate program which consists of three rotations during a time of three years (in my case, 3 and a half years). I rolled off the program 
+in 2021 and joined the MLOps team as Tech Lead. I was selected to be part of a program for Ford employees called High Tech High Demand (HTHD). 
 
-At Ford, I experienced how machine learning (ML) is used in marketing to make product recommendations and send targeted communications to improve sales and customer experience. I also conducted research on Fintech, including ML, to democratize AI development in the company. As such, I explored AI-as-a-service technologies and created internal publications on how to integrate trained ML models to applications that satisfied company security protocols and that could be integrated to the company's cloud platform. Now, I have been working in different use cases developing scalable AI-based solutions covering regression, classification, clustering, and natural language processing. Thus, I experienced how AI could adapt to different real-world problems.  The demand for internal AI-consulting in the company has exponentially grown in the last few years. As such, I have had the opportunity to be a Tech Lead for one of the new teams that the company is creating to accelerate the production of AI-based solutions. In this position, I am responsible for the technical implementation of the AI-based solutions of my team as well as planning and managing resources to achieve company goals.
+At Ford, I experienced how machine learning (ML) is used in marketing to make product recommendations and send targeted communications to improve sales and customer experience. I also conducted research on Fintech, 
+including ML, to democratize AI development in the company. As such, I explored AI-as-a-service technologies and created internal publications on how to integrate trained ML models to applications that satisfied 
+company security protocols and that could be integrated to the company's cloud platform. In 2021 and 2022, I worked in different use cases developing scalable AI-based solutions covering regression, classification, 
+clustering, and natural language processing. Thus, I experienced how AI could adapt to different real-world problems. The demand for internal AI-consulting in the company has exponentially grown in the last few 
+years. As such, I had the opportunity to be a Tech Lead for one of the new teams that the company is created to accelerate the production of AI-based solutions. In this position, I was responsible for the 
+technical implementation of the AI-based solutions of my team as well as planning and managing resources to achieve company goals.
 
+I left Ford Motor Company at the end of August 2022 to start my M.S. in Computer Science program at UC San Diego as a full-time student.  
+
+Note: See my resume below for more info.
 
 ### Research internships:
 
@@ -55,5 +89,7 @@ vehicle's behavior. As such, I integrated the hardware and software components o
 performance under different light spectrums. I also improved the robot’s computer vision (CV) capabilities to perform new navigation and behavioral planning functionalities. This experience
 motivated me to intern at Universidad del Valle, where I worked, under the supervision of [Dr. Bladimir Bacca](https://eiee.univalle.edu.co/eval-bladimir-bacca-cortes), on another vision-based autonomous vehicle project. Here, the research focus
 was on multi-goal path planning systems for intelligent service robots in office-like environments. After reviewing papers on projective transformations and topological mapping, I
-developed a program to create a topological map based on a video and another program to predict the vehicle’s location using visual information. (see my resume below for more info) 
+developed a program to create a topological map based on a video and another program to predict the vehicle’s location using visual information. 
+
+Note: See my resume below for more info.
 
