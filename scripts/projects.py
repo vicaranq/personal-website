@@ -211,14 +211,14 @@ def get_projects(app):
         [
             dbc.Row(
             [
-                dbc.Col(sentiment_analysis_card, width="auto"),
-                dbc.Col(word_similarity, width="auto"),
+                dbc.Col(sentiment_analysis_card, width="auto", lg=6),
+                dbc.Col(word_similarity, width="auto", lg=6),
             ]
             ),
             dbc.Row(
             [
-                dbc.Col(bert_tweet_proj, width="auto"),
-                dbc.Col(cv_proj1, width="auto"),
+                dbc.Col(bert_tweet_proj, width="auto", lg=6),
+                dbc.Col(cv_proj1, width="auto", lg=6),
             ]
             ),
 
