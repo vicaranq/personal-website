@@ -121,14 +121,70 @@ word_similarity = dbc.Card(
                             style={"width": "24rem"},
                         )
 
+# NLP: final project
+
+bert_tweet_proj = dbc.Card(
+                            [
+
+                                dbc.CardBody(
+                                    [
+                                        html.H4("RecoTweet", className="card-title"),
+                                        html.P(
+                                            """
+                                            This was my final project for the XCS224U: Natural Language Understanding  class at Standford University. In this project, I worked with 
+                                            Elizabeth Yam, I current Google engineer. 
+
+
+                                            A set of experiments on sentiment analysis
+                                            datasets were performed to compare two embedding
+                                            models, BERT and BERTweet. We
+                                            are using the BERTweet-large model which
+                                            was pretrained with 873M English cased
+                                            Tweets. Our hypothesis was that BERTweet
+                                            would outperform the BERT model on tweets
+                                            due to the different data that each model was
+                                            trained on (e.g. well-structured text vs informal
+                                            text from tweets). Our findings indicate
+                                            that the BERTweet model has the same
+                                            or slightly better results over BERT when we
+                                            compare them using datasets containing Twitter
+                                            data. As part of this project, we are also using
+                                            a pre-built named entity recognition (NER)
+                                            model to create a general system to perform
+                                            sentiment analysis on products from a dataset
+                                            of tweets.
+
+                                            """,
+                                            className="card-text", 
+                                            style = {'align' : 'justify'}
+
+                                        ),
+                                        dbc.Button("Final Paper", color="link", href="https://github.com/vicaranq/CS224-final-project/blob/main/xcs224u_final_paper.pdf", target="_blank"),
+                                    ]
+                                ),                              
+                            ],
+                            style={"width": "24rem"},
+                        )                        
+
 # ------------------------- DEFINE CARDS LAYOUT  --------------------
 
-cards = dbc.Row(
+cards = html.Div(
     [
-        dbc.Col(sentiment_analysis_card, width="auto"),
-        dbc.Col(word_similarity, width="auto"),
+        dbc.Row(
+        [
+            dbc.Col(sentiment_analysis_card, width="auto"),
+            dbc.Col(word_similarity, width="auto"),
+        ]
+        ),
+        dbc.Row(
+        [
+            dbc.Col(bert_tweet_proj, width="auto"),
+            #dbc.Col(word_similarity, width="auto"),
+        ]
+        ),
+
     ]
-)
+    )
 ''' ------------------------------- END CARDS ------------------------------- '''
 
 
