@@ -98,7 +98,7 @@ def render_content(tab):
     if tab == 'tab-1-bio':
         return bio.get_bio_content(app)
     elif tab == 'tab-2-projs':
-        return projects.get_projects()
+        return projects.get_projects(app)
     elif tab == 'tab-3-pics':
         return photos.get_photos(app)
     elif tab == 'tab-4-contact':
