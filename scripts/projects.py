@@ -12,11 +12,14 @@ def get_projects():
             html.Br(),
             html.H3('In progress...'),
             html.Br(),
-            sentiment_analysis_card,
-            word_similarity,
+            # sentiment_analysis_card,
+            # word_similarity,
+            cards,
 
 
         ])
+
+
 
 ''' ------------------------------- CARDS ------------------------------- '''
 
@@ -118,6 +121,14 @@ word_similarity = dbc.Card(
                             style={"width": "24rem"},
                         )
 
+# ------------------------- DEFINE CARDS LAYOUT  --------------------
+
+cards = dbc.Row(
+    [
+        dbc.Col(sentiment_analysis_card, width="auto"),
+        dbc.Col(word_similarity, width="auto"),
+    ]
+)
 ''' ------------------------------- END CARDS ------------------------------- '''
 
 

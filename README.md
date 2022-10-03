@@ -41,6 +41,7 @@ Link to website:
 
   :eyes: ```git push heroku master```
 
+:pencil2: Note: CICD pipeline integrated so one only needs to merge a PR to master branch and it will automatically deploy to prod (PR deploys to QA first). 
 
 # SSL Certificate
 
