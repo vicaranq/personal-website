@@ -6,117 +6,236 @@ from dash import html
 
 from scripts import util
 
-def get_projects():
+def get_projects(app):
+    ''' ------------------------------- CARDS ------------------------------- '''
+    sentiment_analysis_card = dbc.Card(
+                                [
+
+                                    dbc.CardBody(
+                                        [
+                                            html.H4("Sentiment Analysis", className="card-title"),
+                                            html.P(
+                                                """For this project, I developed a binary linear classifier that reads movie reviews and guesses whether they are “positive” or “negative”.
+                                                The  data used for developing this project was obtained from www.rottentomatoes.com.
+                                                
+                                                I implemented this algorithm using stochastic gradient descent and learned the predictor by minimizing the hinge loss function. The generated 
+                                                predictor obtained a training error of 0.027011 and test error of 0.2751228. For this project, I utilized a sparse feature vector represented in 
+                                                Python by a dictionary (e.g. defaultdict from Collections).
+
+                                                I created and used two type of feature extractors in this project; a word feature extractor and a character n-grams feature extractor. The former 
+                                                one takes words as features, the latter one takes N characters slices of the review (with no spaces). 
+
+                                                To try it out, get some reviews from https://www.rottentomatoes.com/m/minari/reviews and type it below, a positive or negative prediction will be generated below.
+
+                                                """,
+                                                className="card-text", 
+                                                style = {'align' : 'justify'}
+
+                                            )
+                                        ]
+                                    ),
+                                    html.Div(
+                                        [
+                                            dbc.Input(id="input", placeholder="Type review...", type="text"),
+                                            html.Br(),
+                                            html.P(id="output"),
+                                        ]
+                                    ),                                
+                                ],
+                                style={"width": "24rem"},
+                            )
+
+    word_segmentation_1 = dbc.Card(
+                                [
+
+                                    dbc.CardBody(
+                                        [
+                                            html.H4("Word Segmentation 2", className="card-title"),
+                                            html.P(
+                                                """
+                                                I develoepd an algorithm to find the optimal word segmentation of an input character sequence. The input string must be a string of alphabetical characters
+                                                without whitespaces. For instance, for input "thisisatest" we should obtain "this is a test". The Uniform Cost Search algorithm is used to 
+
+                                                """,
+                                                className="card-text", 
+                                                style = {'align' : 'justify'}
+
+                                            )
+                                        ]
+                                    ),
+                                    html.Div(
+                                        [
+                                            dbc.Input(id="input", placeholder="Type review...", type="text"),
+                                            html.Br(),
+                                            html.P(id="output"),
+                                        ]
+                                    ),                                
+                                ],
+                                style={"width": "24rem"},
+                            )
+
+
+    word_similarity = dbc.Card(
+                                [
+
+                                    dbc.CardBody(
+                                        [
+                                            html.H4("Word Similarity", className="card-title"),
+                                            html.P(
+                                                """
+                                                I develoepd a Vector Space Model (VSM) based on the Gigaword dataset with window size of 5 and scaled. Furthermore, I reweighted the matrix using the Positive Pointwise Mutual Information (PPMI) and 
+                                                used the Latent Semantic Analysis (LSA) dimensionality reduction technique. Based on an input word, one could find the closest words to it (e.g. similar words). Please provide a word and this 
+                                                program will show the 5 closest words to it according to this VSM. 
+                                                Note: Word examples are: terrific, happy, dance, sleep.  
+                                                """,
+                                                className="card-text", 
+                                                style = {'align' : 'justify'}
+
+                                            )
+                                        ]
+                                    ),
+                                    html.Div(
+                                        [
+                                            dbc.Input(id="word_sim_input", placeholder="Type input word...", type="text"),
+                                            html.Br(),
+                                            html.P(id="word_sim_output"),
+                                        ]
+                                    ),                                
+                                ],
+                                style={"width": "24rem"},
+                            )
+
+    # NLP: final project
+
+    bert_tweet_proj = dbc.Card(
+                                [
+
+                                    dbc.CardBody(
+                                        [
+                                            html.H4("RecoTweet", className="card-title"),
+                                            html.P(
+                                                """
+                                                This was my final project for the XCS224U: Natural Language Understanding  class at Standford University. In this project, I worked with 
+                                                Elizabeth Yam, I current Google engineer. 
+
+
+                                                A set of experiments on sentiment analysis
+                                                datasets were performed to compare two embedding
+                                                models, BERT and BERTweet. We
+                                                are using the BERTweet-large model which
+                                                was pretrained with 873M English cased
+                                                Tweets. Our hypothesis was that BERTweet
+                                                would outperform the BERT model on tweets
+                                                due to the different data that each model was
+                                                trained on (e.g. well-structured text vs informal
+                                                text from tweets). Our findings indicate
+                                                that the BERTweet model has the same
+                                                or slightly better results over BERT when we
+                                                compare them using datasets containing Twitter
+                                                data. As part of this project, we are also using
+                                                a pre-built named entity recognition (NER)
+                                                model to create a general system to perform
+                                                sentiment analysis on products from a dataset
+                                                of tweets.
+
+                                                """,
+                                                className="card-text", 
+                                                style = {'align' : 'justify'}
+
+                                            ),
+                                            dbc.Button("Final Paper", color="link", href="https://github.com/vicaranq/CS224-final-project/blob/main/xcs224u_final_paper.pdf", target="_blank"),
+                                        ]
+                                    ),                              
+                                ],
+                                style={"width": "24rem"},
+                            )                        
+
+
+    # cv_proj1 = dbc.Card(
+    #                             [
+
+    #                                 dbc.CardBody(
+    #                                     [
+    #                                         html.H4("MaskOn - Computer Vision Project", className="card-title"),
+    #                                         html.P(
+    #                                             """
+    #                                             Developed code to create different image transformation fucntionalities to rotate, flip, and modify color settings (grayscale/using a single channel). 
+    #                                             Additionally, three images were given, one of a statue, another one of a mask, and another binary version of the mask image. This latter one was used to
+    #                                             select the pixels on the statue image where the mask needed to be shown. The goal was to put the mask on the bear statue. 
+
+    #                                             Here are the outcomes:
+
+    #                                             """,
+    #                                             className="card-text", 
+    #                                             style = {'align' : 'justify'}
+
+    #                                         ),
+    #                                         html.Img(src=app.get_asset_url('combined_img.jpg'), style={'height':'30%', 'width':'30%'}), #, style={'height':'30%', 'width':'30%'}                                     
+    #                                         html.Img(src=app.get_asset_url('maskon_img.jpg')),
+    #                                     ]
+    #                                 ),                              
+    #                             ],
+                                
+    #                             style={"width": "24rem"},
+    #                         )   
+
+    cv_proj1 = dbc.Card(
+                            [
+                                dbc.CardBody(
+                                            [
+                                                html.H4("MaskOn - Computer Vision Project", className="card-title"),
+                                                html.P(
+                                                    """
+                                                    Developed code to create different image transformation fucntionalities to rotate, flip, and modify color settings of an image (grayscale/using a single channel). 
+                                                    Additionally, three images were given, one of a statue, another one of a mask, and another binary version of the mask image. This latter one was used to
+                                                    select the pixels on the statue image where the mask needed to be shown. The goal was to put the mask on the bear statue. 
+
+                                                    Here are the outcomes:
+
+                                                    """,
+                                                    className="card-text", 
+                                                    style = {'align' : 'justify'}
+
+                                                ),                                                
+                                            ]
+                                        ),  
+                                dbc.CardImg(src=app.get_asset_url('combined_img.jpg'), bottom=True),
+                                dbc.CardImg(src=app.get_asset_url('maskon_img.jpg'), bottom=True),
+                            ],
+                            style={"width": "18rem"},
+                    )                                
+
+    # ------------------------- DEFINE CARDS LAYOUT  --------------------
+
+    cards = html.Div(
+        [
+            dbc.Row(
+            [
+                dbc.Col(sentiment_analysis_card, width="auto", lg=6),
+                dbc.Col(word_similarity, width="auto", lg=6),
+            ]
+            ),
+            dbc.Row(
+            [
+                dbc.Col(bert_tweet_proj, width="auto", lg=6),
+                dbc.Col(cv_proj1, width="auto", lg=6),
+            ]
+            ),
+
+        ]
+        )
 
     return html.Div([
             html.Br(),
             html.H3('In progress...'),
             html.Br(),
-            sentiment_analysis_card,
-            word_similarity,
+            # sentiment_analysis_card,
+            # word_similarity,
+            cards,
 
 
         ])
 
-''' ------------------------------- CARDS ------------------------------- '''
-
-sentiment_analysis_card = dbc.Card(
-                            [
-
-                                dbc.CardBody(
-                                    [
-                                        html.H4("Sentiment Analysis", className="card-title"),
-                                        html.P(
-                                            """For this project, I developed a binary linear classifier that reads movie reviews and guesses whether they are “positive” or “negative”.
-                                            The  data used for developing this project was obtained from www.rottentomatoes.com.
-                                            
-                                            I implemented this algorithm using stochastic gradient descent and learned the predictor by minimizing the hinge loss function. The generated 
-                                            predictor obtained a training error of 0.027011 and test error of 0.2751228. For this project, I utilized a sparse feature vector represented in 
-                                            Python by a dictionary (e.g. defaultdict from Collections).
-
-                                            I created and used two type of feature extractors in this project; a word feature extractor and a character n-grams feature extractor. The former 
-                                            one takes words as features, the latter one takes N characters slices of the review (with no spaces). 
-
-                                            To try it out, get some reviews from https://www.rottentomatoes.com/m/minari/reviews and type it below, a positive or negative prediction will be generated below.
-
-                                            """,
-                                            className="card-text", 
-                                            style = {'align' : 'justify'}
-
-                                        )
-                                    ]
-                                ),
-                                html.Div(
-                                    [
-                                        dbc.Input(id="input", placeholder="Type review...", type="text"),
-                                        html.Br(),
-                                        html.P(id="output"),
-                                    ]
-                                ),                                
-                            ],
-                            style={"width": "24rem"},
-                        )
-
-
-word_segmentation_1 = dbc.Card(
-                            [
-
-                                dbc.CardBody(
-                                    [
-                                        html.H4("Word Segmentation 2", className="card-title"),
-                                        html.P(
-                                            """
-                                            I develoepd an algorithm to find the optimal word segmentation of an input character sequence. The input string must be a string of alphabetical characters
-                                            without whitespaces. For instance, for input "thisisatest" we should obtain "this is a test". The Uniform Cost Search algorithm is used to 
-
-                                            """,
-                                            className="card-text", 
-                                            style = {'align' : 'justify'}
-
-                                        )
-                                    ]
-                                ),
-                                html.Div(
-                                    [
-                                        dbc.Input(id="input", placeholder="Type review...", type="text"),
-                                        html.Br(),
-                                        html.P(id="output"),
-                                    ]
-                                ),                                
-                            ],
-                            style={"width": "24rem"},
-                        )
-
-
-word_similarity = dbc.Card(
-                            [
-
-                                dbc.CardBody(
-                                    [
-                                        html.H4("Word Similarity", className="card-title"),
-                                        html.P(
-                                            """
-                                            I develoepd a Vector Space Model (VSM) based on the Gigaword dataset with window size of 5 and scaled. Furthermore, I reweighted the matrix using the Positive Pointwise Mutual Information (PPMI) and 
-                                            used the Latent Semantic Analysis (LSA) dimensionality reduction technique. Based on an input word, one could find the closest words to it (e.g. similar words). Please provide a word and this 
-                                            program will show the 5 closest words to it according to this VSM. 
-                                            Note: Word examples are: terrific, happy, dance, sleep.  
-                                            """,
-                                            className="card-text", 
-                                            style = {'align' : 'justify'}
-
-                                        )
-                                    ]
-                                ),
-                                html.Div(
-                                    [
-                                        dbc.Input(id="word_sim_input", placeholder="Type input word...", type="text"),
-                                        html.Br(),
-                                        html.P(id="word_sim_output"),
-                                    ]
-                                ),                                
-                            ],
-                            style={"width": "24rem"},
-                        )
 
 ''' ------------------------------- END CARDS ------------------------------- '''
 
