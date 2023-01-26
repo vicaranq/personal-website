@@ -2,9 +2,9 @@
 
 Thank you for visiting. My name is Victor and this is my personal website. 
 
-### Origin:
-I am from Cali, Colombia where I studied at ICESI university. I moved to Boston, MA in 2014 where I finished my undergraduate studies at the University of Massachusetts Amherst. I graduated and moved to Michigan for work in 2018.
-Three years later and during the pandemic, I moved back to Boston where I am currently living. 
+### Brief personal story:
+I am originally from Cali, Colombia. In 2014, I moved to Boston, MA where I learned English through an ESL program at the University of Massachusetts Boston and later transferred my studies from Colombia to the University of Massachusetts Amherst. I graduated as a computer engineer in 2018 and moved to Dearborn, Michigan for work that same year.
+Three years later and during the pandemic, I moved back to Boston. Now, I am pursuing my Master of Science in Computer Science at the University of California San Diego. 
 
 ### Interests:
 
