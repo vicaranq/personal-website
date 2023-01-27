@@ -32,7 +32,15 @@ Certifications:
 
 #### Relevant Classes:
 
-- *UC San Diego * 
+- *UC San Diego* 
+
+    (Winter 2023)
+
+    CSE 234 	Data Systems for Machine Learning - Prof. Arun Kumar
+
+    CSE 210 	Principles of Software Engineering - Prof. Michael Coblenz 
+
+    CSE 240A 	Principles in Computer Architecture - Prof. Pat Pannuto
 
     (Fall 2022)
 
@@ -67,7 +75,11 @@ Certifications:
 
 ### Work Experience
 
-I joined Ford Motor Company in July 2018 through the Ford College Graduate program which consists of three rotations during a time of three years (in my case, 3 and a half years). I rolled off the program 
+I am currently working (while studying) as a Graduate Advocate at [PATHS program](https://paths.ucsd.edu/about/meet-the-staff.html#Student-Staff) in UC San Diego. I assist, lead, guide, tutor, and engage with PATHS 
+scholars who are completing their bacherlors degree. All the scholars that I guide are in STEM, specifically in Computer Science, Data Analytics, and Engineering. My goal is to share
+my experience with them and help them succeed during their academic and professional career. 
+
+Prior to starting my MS program, I joined Ford Motor Company in July 2018 through the Ford College Graduate program which consists of three rotations during a time of three years (in my case, 3 and a half years). I rolled off the program 
 in 2021 and joined the MLOps team as Tech Lead. I was selected to be part of a program for Ford employees called High Tech High Demand (HTHD). 
 
 At Ford, I experienced how machine learning (ML) is used in marketing to make product recommendations and send targeted communications to improve sales and customer experience. I also conducted research on Fintech, 

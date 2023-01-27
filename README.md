@@ -11,9 +11,12 @@ Link to website:
 
 1. Create virtual environment 
 
+:eyes:``` python -m venv env ```
+
+
 2. Activate environment:
 
-  :eyes:``` source venv/bin/activate ```
+  :eyes:``` source env/bin/activate ```
 
 :pencil2: Note: Using WSL/Linux
 

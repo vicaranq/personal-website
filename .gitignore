@@ -4,3 +4,4 @@ venv
 .envv
 .swp
 ssl/
+env/
