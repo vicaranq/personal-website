@@ -17,13 +17,12 @@ from scripts import projects, photos, contact, util
 
 
 
-app = dash.Dash(__name__, external_stylesheets = [dbc.themes.BOOTSTRAP])
+application = app = dash.Dash(__name__, external_stylesheets = [dbc.themes.BOOTSTRAP])
 app.config.suppress_callback_exceptions=True
 app.title = "Victor Arango-Quiroga"
 application = app.server # for AWS
 server = app.server
-
-# flask_app = app.server
+flask_app = app.server
 
 # # Setup as per Flask integration
 # ScoutApm(flask_app)
