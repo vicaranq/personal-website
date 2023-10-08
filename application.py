@@ -12,7 +12,7 @@ from scripts import projects, photos, contact, util
 
 #pip install scout-apm
 # Integrating with scoutapm
-from scout_apm.flask import ScoutApm
+#from scout_apm.flask import ScoutApm
 
 
 
@@ -21,6 +21,7 @@ app = dash.Dash(__name__, external_stylesheets = [dbc.themes.BOOTSTRAP])
 app.config.suppress_callback_exceptions=True
 app.title = "Victor Arango-Quiroga"
 application = app.server # for AWS
+server = app.server
 
 # flask_app = app.server
 
@@ -109,5 +110,6 @@ def render_content(tab):
 
 if __name__ == '__main__':
     #app.run_server(debug=True)
-    application.run(debug=True, port=8080) # for AWS
+    application.debug = True
+    application.run() # for AWS
 
