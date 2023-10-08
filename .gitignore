@@ -4,3 +4,10 @@ venv
 .envv
 .swp
 ssl/
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+requirements_old.txt
+myAWSfiles.zip

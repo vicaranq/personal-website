@@ -20,12 +20,13 @@ from scout_apm.flask import ScoutApm
 app = dash.Dash(__name__, external_stylesheets = [dbc.themes.BOOTSTRAP])
 app.config.suppress_callback_exceptions=True
 app.title = "Victor Arango-Quiroga"
+application = app.server # for AWS
 
-flask_app = app.server
+# flask_app = app.server
 
-# Setup as per Flask integration
-ScoutApm(flask_app)
-flask_app.config["SCOUT_NAME"] = "website-monitoring"
+# # Setup as per Flask integration
+# ScoutApm(flask_app)
+# flask_app.config["SCOUT_NAME"] = "website-monitoring"
 
 
 colors = {
@@ -107,5 +108,6 @@ def render_content(tab):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    #app.run_server(debug=True)
+    application.run(debug=True, port=8080) # for AWS
 
